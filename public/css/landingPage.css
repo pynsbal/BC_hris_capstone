@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --bg-image: url("http://127.0.0.1:8000/assets/img/bcschool.png");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    width: 400px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 15px;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.wrapper .bclogo img {
+    width: 70px;
+}
+
+.wrapper .bclogo h1 {
+    font-size: 12px;
+    text-align: center;
+}
+
+.wrapper .hrlogo img {
+    width: 250px;
+}
+
+.wrapper .hrlogo h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+/* Styling for input fields to match the button */
+.wrapper input[type="email"],
+.wrapper input[type="password"] {
+    width: 100%;
+    height: 45px; /* Same height as the button */
+    background: #fff; /* Same background as the button */
+    border: none; /* Remove border */
+    outline: none;
+    border-radius: 40px; /* Same rounded corners as the button */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Same shadow as the button */
+    font-size: 16px; /* Same font size as the button */
+    font-weight: 600; /* Make the font a bit bold, like the button */
+    padding: 0 20px; /* Add padding inside the input */
+    margin-top: 20px; /* Add some space between the fields and the button */
+    color: #000; /* Text color inside the input */
+}
+
+/* Styling for focus state */
+.wrapper input[type="email"]:focus,
+.wrapper input[type="password"]:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Increase shadow on focus */
+}
+
+/* Styling for invalid inputs */
+.is-invalid {
+    border: 2px solid #e3342f; /* Red border for invalid inputs */
+}
+
+.invalid-feedback {
+    color: #e3342f;
+    font-size: 14px;
+    margin-top: 5px;
+}

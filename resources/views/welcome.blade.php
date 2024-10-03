@@ -5,77 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and Register</title>
+    <title>BCHRIS</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-        :root {
-            --bg-image: url('http://127.0.0.1:8000/assets/img/bcschool.png');
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-image: var(--bg-image);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .wrapper {
-            width: 400px;
-            background: transparent;
-            border: 2px solid rgba(255, 255, 255, .2);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-            color: #fff;
-            border-radius: 15px;
-            padding: 30px 40px;
-            text-align: center;
-        }
-
-        .wrapper .bclogo img {
-            width: 70px;
-        }
-
-        .wrapper .bclogo h1 {
-            font-size: 12px;
-            text-align: center;
-        }
-
-        .wrapper .hrlogo img {
-            width: 250px;
-        }
-
-        .wrapper .hrlogo h2 {
-            font-size: 40px;
-            text-align: center;
-        }
-
-        .wrapper .btn {
-            width: 100%;
-            height: 45px;
-            background: #fff;
-            border: none;
-            outline: none;
-            border-radius: 40px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/landingPage.css') }}">
 </head>
 
 <body>
@@ -89,19 +21,39 @@
             <div class="hrlogo">
                 <img src="{{ asset('assets/img/hrw.png') }}">
                 <h2>BCHRIS</h2>
-                <h3>Welcome</h3>
 
-                <!-- Login Button -->
-                <a href="{{ route('login') }}">
-                    <button class="btn">Login</button>
-                </a>
+                <!-- Login Form -->
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
 
-                <!-- Register Button -->
-                <a href="{{ route('register') }}">
-                    <button class="btn">Register</button>
-                </a>
+                    <div class="form-group">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                            name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+                            placeholder="Email Address">
 
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
 
+                    <div class="form-group">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
+                            name="password" required autocomplete="current-password" placeholder="Password">
+
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
+
+                    <button type="submit" class="btn">
+                        {{ __('Login') }}
+                    </button>
+
+                </form>
             </div>
         </div>
     </div>
