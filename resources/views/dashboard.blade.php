@@ -14,7 +14,7 @@
                     </div>
                     @endif
 
-                    {{ __('You are logged in!ADSADS') }}
+                    {{ __('You are logged in! DASHBOARD ADMIN') }}
                 </div>
             </div>
         </div>
