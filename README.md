@@ -43,6 +43,13 @@ run - npm run dev
 ## Temporary Credential
 
 ```
+FOR ADMIN ACC:
 email: bc_admin@gmail.com
 password: admin123
+```
+
+```
+FOR EMPLOYEE ACC:
+email: bc_employee@gmail.com
+password: employee123
 ```
