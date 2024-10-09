@@ -28,11 +28,15 @@
                             DASHBOARD
                         </a>
                     </li>
+                    
+                    <!-- Check if user is Admin -->
+                    @if(auth()->user()->role === 'admin')
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link">
                             <i class="fa-regular fa-file-lines pe-2"></i>
                             Registration
                         </a>
+                    </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link">
                             <i class="fa-solid fa-sliders pe-2"></i>
@@ -44,16 +48,35 @@
                             <i class="fa-regular fa-user pe-2"></i>
                             Document Requests
                         </a>
+                    </li>
 
-
+                    <!-- Check if user is Employee -->
+                    @elseif(auth()->user()->role === 'employee')
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Profile
+                        </a>
                     </li>
                     <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-solid fa-sliders pe-2"></i>
+                            Leave Application
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Document Requests
+                        </a>
+                    </li>
+                    @endif
+
+                    <li class="sidebar-item">
                         <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
-
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
@@ -61,13 +84,11 @@
                 </ul>
             </div>
         </aside>
-
     </div>
-    
+
     <main class="py-4">
         @yield('content')
     </main>
-    </div>
 </body>
 
 </html>
