@@ -12,7 +12,11 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        // Fetch all employees from the database
+        $employees = Employee::all();
+
+        // Pass the $employees variable to the 'employees.index' view
+        return view('employees.index', compact('employees'));
     }
 
     /**
@@ -36,8 +40,10 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        //
+        // Pass the employee data to the view
+        return view('employees.index', compact('employee'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

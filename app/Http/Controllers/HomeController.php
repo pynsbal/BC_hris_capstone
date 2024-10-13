@@ -24,13 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Check the authenticated user's role
-        if (Auth::user()->role == 'admin') {
-            // Return the admin dashboard view
-            return view('dashboard');
-        } elseif (Auth::user()->role == 'employee') {
-            // Return the employee dashboard view located in the 'employee' folder
-            return view('employee.employeeDashboard');
+        // Get the authenticated user
+        $user = Auth::user(); // This gets the currently authenticated user
+
+        // Check the user's role and pass user info to the appropriate view
+        if ($user->role == 'admin') {
+            // Return the admin dashboard view with user info
+            return view('dashboard', compact('user')); // Pass the user data to the view
+        } elseif ($user->role == 'employee') {
+            // Return the employee dashboard view with user info
+            return view('employee.employeeDashboard', compact('user')); // Pass the user data to the view
         }
 
         // Fallback view if the role is not recognized
