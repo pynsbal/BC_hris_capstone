@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    <title>Sidebar With Bootstrap</title>
+    <title>BCHRIS</title>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                             DASHBOARD
                         </a>
                     </li>
-                    
+
                     <!-- Check if user is Admin -->
                     @if(auth()->user()->role === 'admin')
                     <li class="sidebar-item">
@@ -73,8 +74,9 @@
                     @endif
 
                     <li class="sidebar-item">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                        <a class="sidebar-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <i class="bi bi-box-arrow-in-left icon-size"></i>
                             {{ __('Logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
