@@ -1,0 +1,99 @@
+/* Container */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Row alignment */
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Card styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    padding: 10px 15px;
+    font-size: 1.25rem;
+}
+
+/* Form styling */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+}
+
+.input-group-append .btn {
+    margin-left: 5px;
+}
+
+/* Button styling */
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    color: #fff;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th, .table td {
+    padding: 0.75rem;
+    text-align: center;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.table tbody tr {
+    background-color: #ffffff;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
