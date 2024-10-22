@@ -16,7 +16,7 @@ class EmployeeSeeder extends Seeder
     {
         DB::table('users')->upsert([
             'name'          =>  'Employee Account',
-            'username'      =>  'bcAdminEmployee',
+            'username'      =>  'bcEmployee',
             'email'         =>  'bc_employee@gmail.com',
             'password'      =>  Hash::make('employee123'),
             'dept_id'       =>  2,

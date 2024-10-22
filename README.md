@@ -44,12 +44,12 @@ run - npm run dev
 
 ```
 FOR ADMIN ACC:
-email: bc_admin@gmail.com
+username: bcAdmin
 password: admin123
 ```
 
 ```
 FOR EMPLOYEE ACC:
-email: bc_employee@gmail.com
+username: bcEmployee
 password: employee123
 ```
