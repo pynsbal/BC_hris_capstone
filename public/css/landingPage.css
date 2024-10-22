@@ -66,7 +66,7 @@ body {
     margin-top: 20px;
 }
 /* Styling for input fields to match the button */
-.wrapper input[type="email"],
+.wrapper input[type="username"],
 .wrapper input[type="password"] {
     width: 100%;
     height: 45px; /* Same height as the button */
