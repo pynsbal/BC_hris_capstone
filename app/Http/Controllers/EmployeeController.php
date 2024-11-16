@@ -40,8 +40,9 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
+        
         // Pass the employee data to the view
-        return view('employees.index', compact('employee'));
+        return view('profile', compact('employee'));
     }
 
 

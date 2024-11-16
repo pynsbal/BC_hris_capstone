@@ -14,3 +14,4 @@ Auth::routes();
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
 Route::resource('employees', EmployeeController::class);
+Route::get('/profile', [EmployeeController::class, 'show'])->name('profile');

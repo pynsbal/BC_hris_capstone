@@ -11,8 +11,8 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <title>BCHRIS</title>
-    
-</style>
+
+    </style>
 
 </head>
 
@@ -20,36 +20,36 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-green shadow-sm">
-    <div class="container-fluid">
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">BCHRIS</a>
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">HUMAN RESOURCE INFORMATION SYSTEM</a>
 
-        <!-- Toggle Button for Mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Toggle Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Navbar Content -->
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-circle fs-4 me-2"></i>
-                        <span>{{ auth()->user()->name }}</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                <i class="bi bi-box-arrow-right me-2"></i> Logout
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-4 me-2"></i>
+                            <span>{{ auth()->user()->name }}</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="bi bi-box-arrow-right me-2"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
     <div class="wrapper">
@@ -57,66 +57,66 @@
         <aside id="sidebar">
             <div class="h-100">
                 <div class="sidebar-logo">
-                    <a href="#">BCHRIS</a>
+                    <ul href="#">BCHRIS</ul>
                 </div>
                 <!-- Sidebar Navigation -->
                 <ul class="sidebar-nav">
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <ul href="#" class="sidebar-link">
                             <i class="fa-solid fa-list pe-2"></i>
                             DASHBOARD
-                        </a>
+                        </ul>
                     </li>
 
                     <!-- Check if user is Admin -->
                     @if(auth()->user()->role === 'admin')
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <ul href="#" class="sidebar-link">
                             <i class="fa-regular fa-file-lines pe-2"></i>
                             Registration
-                        </a>
+                        </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <ul href="#" class="sidebar-link">
                             <i class="fa-solid fa-sliders pe-2"></i>
                             Leave Requests
-                        </a>
+                        </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <ul href="#" class="sidebar-link">
                             <i class="fa-regular fa-user pe-2"></i>
                             Document Requests
-                        </a>
+                        </ul>
                     </li>
 
                     <!-- Check if user is Employee -->
                     @elseif(auth()->user()->role === 'employee')
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="{{ route('profile') }}" class="sidebar-link"> <!-- Use 'route' for better URL handling -->
                             <i class="fa-regular fa-user pe-2"></i>
                             Profile
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <ul href="#" class="sidebar-link">
                             <i class="fa-solid fa-sliders pe-2"></i>
                             Leave Application
-                        </a>
+                        </ul>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <ul href="#" class="sidebar-link">
                             <i class="fa-regular fa-user pe-2"></i>
                             Document Requests
-                        </a>
+                        </ul>
                     </li>
                     @endif
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('logout') }}"
+                        <ul class="sidebar-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i class="bi bi-box-arrow-in-left icon-size"></i>
                             {{ __('Logout') }}
-                        </a>
+                        </ul>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
