@@ -7,10 +7,11 @@
             <!-- Card for Employee Profile Form -->
             <div class="card mb-4">
                 <div class="card-header">
-                    <h2>Employee Profile Form</h2>
+                    <h2 style="text-align: center;"><strong> EMPLOYEE PROFILE FORM</strong></h2>
                 </div>
                 <div class="card-body">
                     <form class="row g-3">
+                        <h5 style="text-align: center;"><strong>PERSONAL INFORMATION</strong></h5>
                         <div class="col-md-3">
                             <label for="prefix" class="form-label">Prefix</label>
                             <select class="form-select" aria-label="Select Prefix" name="prefix" required>
@@ -98,6 +99,10 @@
                             <input type="date" class="form-control" id="date_employed" name="date_employed" required>
                         </div>
                         <div class="col-md-3">
+                            <label for="date_employed" class="form-label">Date Employed</label>
+                            <input type="date" class="form-control" id="date_employed" name="date_employed" required>
+                        </div>
+                        <div class="col-md-3">
                             <label for="position" class="form-label">Position</label>
                             <input type="text" class="form-control" id="position" name="position" required>
                         </div>
@@ -105,7 +110,7 @@
                             <label for="employee_id" class="form-label">Employee ID</label>
                             <input type="text" class="form-control" id="employee_id" name="employee_id" required>
                         </div>
-                        
+
                         <h5><strong>Present Address</strong></h5>
                         <div class="col-md-3">
                             <label for="Present#street" class="form-label">Street Number</label>
@@ -115,28 +120,110 @@
                             <label for="PresentBarangay" class="form-label">Barangay</label>
                             <input type="text" class="form-control" id="PresentBarangay" name="PresentBarangay" required>
                         </div>
-                        <!-- Add the rest of the address fields for Present Address -->
-
+                        <div class="col-md-3">
+                            <label for="PresentCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="PresentCity" name="PresentCity" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="PresentProvince" class="form-label">Province</label>
+                            <input type="text" class="form-control" id="PresentProvince" name="PresentProvince" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="PresentZIP" class="form-label">ZIP</label>
+                            <input type="text" class="form-control" id="PresentZIP" name="PresentZIP" required>
+                        </div>
                         <h5><strong>Permanent Address</strong></h5>
                         <div class="col-md-3">
                             <label for="PermanentStreet" class="form-label">Street Number</label>
                             <input type="text" class="form-control" id="PermanentStreet" name="PermanentStreet" required>
                         </div>
-                        <!-- Add the rest of the address fields for Permanent Address -->
-
+                        <div class="col-md-3">
+                            <label for="PermanentBarangay" class="form-label">Barangay</label>
+                            <input type="text" class="form-control" id="PermanentBarangay" name="PermanentBarangay" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="PermanentCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="PermanentCity" name="PermanentCity" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="PermanentProvince" class="form-label">Province</label>
+                            <input type="text" class="form-control" id="PermanentProvince" name="PermanentProvince" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="PermanentZIP" class="form-label">ZIP</label>
+                            <input type="text" class="form-control" id="PermanentZIP" name="PermanentZIP" required>
+                        </div>
+                        <h7><strong>Provincial Address</strong></h7>
+                        <div class="col-md-3">
+                            <label for="Provincial#street" class="form-label">Street Number</label>
+                            <input type="text" class="form-control" id="Provincial#street" name="Provincial#street" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ProvincialBarangay" class="form-label">Barangay</label>
+                            <input type="text" class="form-control" id="ProvincialBarangay" name="ProvincialBarangay" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ProvincialCity" class="form-label">City</label>
+                            <input type="text" class="form-control" id="ProvincialCity" name="ProvincialCity" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ProvincialProvince" class="form-label">Province</label>
+                            <input type="text" class="form-control" id="ProvincialProvince" name="ProvincialProvince" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="ProvincialZIP" class="form-label">ZIP</label>
+                            <input type="text" class="form-control" id="ProvincialZIP" name="ProvincialZIP" required>
+                        </div>
+                    </form>
+                    <br>
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="placeofbirth" class="form-label"><strong>Place of Birth</strong></label>
+                            <input type="text" class="form-control" id="placeofbirth" name="placeofbirth" required>
+                        </div>
+                    </form>
+                    <br>
+                    <form class="row g-3">
+                        <h7><strong>Government Identification Number</strong></h7>
+                        <div class="col-md-3">
+                            <label for="philno" class="form-label">Phil Health No.</label>
+                            <input type="number" class="form-control" id="philno" name="philno" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="pag-ibigno" class="form-label">Pag-Ibig No.</label>
+                            <input type="number" class="form-control" id="pag-ibigno" name="pag-ibigno" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="TIN" class="form-label">TIN</label>
+                            <input type="number" class="form-control" id="TIN" name="TIN" required>
+                        </div>
                         <div class="col-md-3">
                             <label for="sss_number" class="form-label">SSS Number</label>
                             <input type="text" class="form-control" id="sss_number" name="sss_number" required>
                         </div>
-                        <!-- Add fields for PhilHealth, Pag-IBIG, TIN Number -->
-
-                        <div class="col-12 text-center mt-4">
-                            <button type="submit" class="btn btn-primary">Save Profile</button>
+                        <div class="col-md-3">
+                            <label for="PRC" class="form-label">PRC ID</label>
+                            <input type="number" class="form-control" id="PRC" name="PRC" required>
                         </div>
                     </form>
+                    
+                    <nav aria-label="col-12 text-center mt-4" class="text-center">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <a href="{{ route('familyBackground') }}" button type="button" class="btn btn-success">NEXT</a>
+                            </li>
+                        </ul>
+                    </nav>
+
                 </div>
             </div>
         </div>
+
+
     </div>
+
+</div>
+</div>
+</div>
 </div>
 @endsection

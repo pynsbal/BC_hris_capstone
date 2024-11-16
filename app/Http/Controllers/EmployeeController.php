@@ -40,9 +40,21 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
+        return view('employee.personalInfo');
+    }
 
-        // Pass the employee data to the view
-        return view('employee.profile');
+    public function familyBackground(Employee $employee)
+    {
+        return view('employee.familyBackground');
+    }
+
+    public function educationalBackground(Employee $employee)
+    {
+        return view('employee.educationalBackground');
+    }
+    public function healthDetails(Employee $employee)
+    {
+        return view('employee.healthDetails');
     }   
     public function payslip()
     {
