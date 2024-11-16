@@ -94,6 +94,10 @@
                             </select>
                         </div>
                         <div class="col-md-3">
+                            <label for="date_employed" class="form-label">Date Employed</label>
+                            <input type="date" class="form-control" id="date_employed" name="date_employed" required>
+                        </div>
+                        <div class="col-md-3">
                             <label for="position" class="form-label">Position</label>
                             <input type="text" class="form-control" id="position" name="position" required>
                         </div>
@@ -120,10 +124,6 @@
                         </div>
                         <!-- Add the rest of the address fields for Permanent Address -->
 
-                        <div class="col-md-3">
-                            <label for="date_employed" class="form-label">Date Employed</label>
-                            <input type="date" class="form-control" id="date_employed" name="date_employed" required>
-                        </div>
                         <div class="col-md-3">
                             <label for="sss_number" class="form-label">SSS Number</label>
                             <input type="text" class="form-control" id="sss_number" name="sss_number" required>

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset('css/employeeRequestDocuments.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('css/employeePayslipstyles.css') }}">
+
     <title>BCHRIS</title>
 </head>
 
@@ -107,6 +109,12 @@
                         <a href="{{ route('documentRequest') }}" class="sidebar-link">
                             <i class="fa-regular fa-user pe-2"></i>
                             Document Requests
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="{{ route('payslip') }}" class="sidebar-link">
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Payslip
                         </a>
                     </li>
                     @endif

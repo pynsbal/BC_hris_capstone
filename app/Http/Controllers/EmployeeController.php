@@ -43,8 +43,12 @@ class EmployeeController extends Controller
 
         // Pass the employee data to the view
         return view('employee.profile');
+    }   
+    public function payslip()
+    {
+        // Pass the employee data to the view
+        return view('employee.employeePayslip');
     }
-
     public function leave(Employee $employee)
     {
 

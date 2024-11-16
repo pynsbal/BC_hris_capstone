@@ -17,6 +17,7 @@ Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 //Employee Route
 Route::resource('employees', EmployeeController::class);
 Route::get('/profile', [EmployeeController::class, 'show'])->name('profile');
+Route::get('/payslip', [EmployeeController::class, 'payslip'])->name('payslip');
 Route::get('/leave', [EmployeeController::class, 'leave'])->name('leave');
 Route::get('/documentRequest', [EmployeeController::class, 'documentRequest'])->name('documentRequest');
 
