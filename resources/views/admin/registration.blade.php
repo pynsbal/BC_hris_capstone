@@ -59,7 +59,7 @@
 
          <div class="row justify-content-end mt-3">
             <div class="col-auto">
-            <button class="btn btn-primary" type="submit">Register</button>
+               <button class="btn btn-primary" type="submit">Register</button>
                <a class="btn btn-danger" href="#">Cancel</a>
             </div>
          </div>

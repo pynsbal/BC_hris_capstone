@@ -1,20 +1,37 @@
 /* Center-aligns the heading */
 h2 {
-   text-align: center;
+    text-align: center;
 }
 
 /* Adds top margin to the container */
 .custom-container {
-   margin-top: 50px; /* Adjust as needed */
+    margin-top: 50px; /* Adjust as needed */
+    padding-left: 250px; /* Ensure space from the sidebar */
+    padding-right: 20px; /* Ensures padding on the right side */
 }
 
 /* Adds custom border radius and padding to the card */
 .custom-card {
-   border-radius: 15px;
-   padding: 20px;
+    border-radius: 15px;
+    padding: 20px;
+    margin-left: 0; /* No left margin needed as we handle this with container padding */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for better visual appearance */
 }
 
-/* Adds space between email and above */
-.form-group-email {
-   margin-top: 20px; /* Adjust as needed */
+/* Make the registration form responsive */
+@media (max-width: 1200px) {
+    .custom-container {
+        padding-left: 20px; /* Adjust space on medium screens */
+    }
+}
+
+/* Ensure proper spacing on smaller screens */
+@media (max-width: 768px) {
+    .custom-container {
+        padding-left: 10px; /* Reduce space on smaller screens */
+    }
+
+    .custom-card {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
 }
