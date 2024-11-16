@@ -35,3 +35,24 @@ h2 {
         margin-left: 0; /* Remove left margin on smaller screens */
     }
 }
+
+/* Center-aligns the heading */
+h2 {
+    text-align: center;
+}
+
+/* Adds top margin to the container */
+.custom-container {
+    margin-top: 50px; /* Adjust as needed */
+}
+
+/* Adds custom border radius and padding to the card */
+.custom-card {
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Adds space between email and above */
+.form-group-email {
+    margin-top: 20px; /* Adjust as needed */
+}
