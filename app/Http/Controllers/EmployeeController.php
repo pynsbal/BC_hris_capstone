@@ -45,7 +45,12 @@ class EmployeeController extends Controller
         return view('employee.profile');
     }
 
+    public function leave(Employee $employee)
+    {
 
+        // Pass the employee data to the view
+        return view('employee.employeeLeave');
+    }
     /**
      * Show the form for editing the specified resource.
      */
