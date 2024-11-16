@@ -55,8 +55,24 @@ class EmployeeController extends Controller
     public function healthDetails(Employee $employee)
     {
         return view('employee.healthDetails');
+    }   
+    public function payslip()
+    {
+        // Pass the employee data to the view
+        return view('employee.employeePayslip');
+    }
+    public function leave(Employee $employee)
+    {
+
+        // Pass the employee data to the view
+        return view('employee.employeeLeave');
     }
 
+    public function documentRequest()
+    {
+        // Pass the employee data to the view or handle it accordingly
+        return view('employee.employeeRequestDocuments');
+    }
 
     /**
      * Show the form for editing the specified resource.
