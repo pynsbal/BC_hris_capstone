@@ -44,7 +44,12 @@ class EmployeeController extends Controller
         // Pass the employee data to the view
         return view('employee.profile');
     }
+    public function payslip(Employee $employee)
+    {
 
+        // Pass the employee data to the view
+        return view('employee.employeePayslip');
+    }
 
     /**
      * Show the form for editing the specified resource.
