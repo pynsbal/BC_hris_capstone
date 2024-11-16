@@ -43,12 +43,23 @@ class EmployeeController extends Controller
 
         // Pass the employee data to the view
         return view('employee.profile');
+    }   
+    public function payslip()
+    {
+        // Pass the employee data to the view
+        return view('employee.employeePayslip');
     }
-    public function payslip(Employee $employee)
+    public function leave(Employee $employee)
     {
 
         // Pass the employee data to the view
-        return view('employee.employeePayslip');
+        return view('employee.employeeLeave');
+    }
+
+    public function documentRequest()
+    {
+        // Pass the employee data to the view or handle it accordingly
+        return view('employee.employeeRequestDocuments');
     }
 
     /**
