@@ -5,7 +5,9 @@
 ::before {
     box-sizing: border-box;
 }
-
+a {
+    text-decoration: none;
+}
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
