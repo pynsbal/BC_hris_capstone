@@ -1,4 +1,4 @@
-@extends ('layout.app')
+@extends('layouts.app')
 
 @section ('content')
 
@@ -36,7 +36,9 @@
                 <label for="ORNumber">OR Number</label>
                 <input type="text" id="ORNumber" name="ORNumber">
             </div>
-            <p><i><center>Note: Please show your receipt upon claiming the reqeusted document/s.</center></i></p>
+            <p><i>
+                    <center>Note: Please show your receipt upon claiming the reqeusted document/s.</center>
+                </i></p>
         </form>
     </div>
 </div>

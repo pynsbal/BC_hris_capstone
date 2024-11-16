@@ -51,6 +51,13 @@ class EmployeeController extends Controller
         // Pass the employee data to the view
         return view('employee.employeeLeave');
     }
+
+    public function documentRequest()
+    {
+        // Pass the employee data to the view or handle it accordingly
+        return view('employee.employeeRequestDocuments');
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
