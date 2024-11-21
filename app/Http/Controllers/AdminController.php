@@ -15,6 +15,14 @@ class AdminController extends Controller
         $departments = Department::all();
         return view('admin.registration', ['departments' => $departments]);
     }
+    public function leaverequestadmin()
+    {
+        return view('admin.leaverequestadmin');
+    }
+    public function documentrequestadmin()
+    {
+        return view('admin.documentrequestadmin');
+    }
 
     public function register(Request $request)
 {
