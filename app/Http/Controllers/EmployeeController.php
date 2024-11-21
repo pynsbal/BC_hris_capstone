@@ -64,6 +64,10 @@ class EmployeeController extends Controller
     {
         return view('employee.seminarsTraining');
     }   
+    public function researchPublication(Employee $employee)
+    {
+        return view('employee.researchPublicatioN');
+    }   
 
 
     public function payslip()
