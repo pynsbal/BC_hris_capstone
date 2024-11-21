@@ -10,4 +10,12 @@ class AdminController extends Controller
     {
         return view('admin.registration');
     }
+    public function leaverequestadmin()
+    {
+        return view('admin.leaverequestadmin');
+    }
+    public function documentrequestadmin()
+    {
+        return view('admin.documentrequestadmin');
+    }
 }

@@ -32,3 +32,5 @@ Route::get('/documentRequest', [EmployeeController::class, 'documentRequest'])->
 
 //Admin Route
 Route::get('/registration', [AdminController::class, 'showRegistrationForm'])->name('registration');
+Route::get('/leaverequestadmin', [AdminController::class, 'leaverequestadmin'])->name('leaverequestadmin');
+Route::get('/documentrequestadmin', [AdminController::class, 'documentrequestadmin'])->name('documentrequestadmin');
