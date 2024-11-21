@@ -73,7 +73,7 @@
                     <!-- Check if user is Admin -->
                     @if(auth()->user()->role === 'admin')
                     <li class="sidebar-item">
-                        <a href="{{ route('registration') }}" class="sidebar-link">
+                        <a href="{{ route('registration.form') }}" class="sidebar-link">
                             <i class="fa-regular fa-file-lines pe-2"></i>
                             Registration
                         </a>
