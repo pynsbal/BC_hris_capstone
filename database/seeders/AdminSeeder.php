@@ -15,7 +15,8 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->upsert([
-            'name'          =>  'Admin Account',
+            'firstName'     =>  'Admin',
+            'lastName'      =>  'Account',
             'username'      =>  'bcAdmin',
             'email'         =>  'bc_admin@gmail.com',
             'password'      =>  Hash::make('admin123'),

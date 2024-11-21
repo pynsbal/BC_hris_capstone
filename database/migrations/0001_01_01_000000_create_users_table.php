@@ -17,7 +17,9 @@ return new class extends Migration
             $roleEnum = [$employee, $admin];
 
             $table->id();
-            $table->string('name');
+            $table->string('firstName');
+            $table->string('middleName')->nullable();
+            $table->string('lastName');
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
