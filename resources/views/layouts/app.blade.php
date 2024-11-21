@@ -37,7 +37,7 @@
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle fs-4 me-2"></i>
-                            <span>{{ auth()->user()->name }}</span>
+                            <span>{{ auth()->user()->firstName }} {{ auth()->user()->lastName }}</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                             <li>
