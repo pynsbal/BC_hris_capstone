@@ -20,6 +20,9 @@ Route::get('/profile', [EmployeeController::class, 'show'])->name('profile');
 Route::get('/familyBackground', [EmployeeController::class, 'familyBackground'])->name('familyBackground');
 Route::get('/educationalBackground', [EmployeeController::class, 'educationalBackground'])->name('educationalBackground');
 Route::get('/healthDetails', [EmployeeController::class, 'healthDetails'])->name('healthDetails');
+Route::get('/dependents', [EmployeeController::class, 'dependents'])->name('dependents');
+Route::get('/seminarsTraining', [EmployeeController::class, 'seminarsTraining'])->name('seminarsTraining');
+
 Route::get('/payslip', [EmployeeController::class, 'payslip'])->name('payslip');
 Route::get('/leave', [EmployeeController::class, 'leave'])->name('leave');
 Route::get('/documentRequest', [EmployeeController::class, 'documentRequest'])->name('documentRequest');

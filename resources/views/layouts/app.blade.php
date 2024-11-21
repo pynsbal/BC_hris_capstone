@@ -73,7 +73,7 @@
                     <!-- Check if user is Admin -->
                     @if(auth()->user()->role === 'admin')
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="{{ route('registration') }}" class="sidebar-link">
                             <i class="fa-regular fa-file-lines pe-2"></i>
                             Registration
                         </a>
@@ -88,6 +88,12 @@
                         <a href="#" class="sidebar-link">
                             <i class="fa-regular fa-user pe-2"></i>
                             Document Requests
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="fa-regular fa-user pe-2"></i>
+                            Payslip
                         </a>
                     </li>
 
