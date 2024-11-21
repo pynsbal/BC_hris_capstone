@@ -79,13 +79,13 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="{{ route('leaverequestadmin') }}" class="sidebar-link">
                             <i class="fa-solid fa-sliders pe-2"></i>
                             Leave Requests
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="{{ route('documentrequestadmin') }}"  class="sidebar-link">
                             <i class="fa-regular fa-user pe-2"></i>
                             Document Requests
                         </a>
