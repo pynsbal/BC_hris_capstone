@@ -56,6 +56,16 @@ class EmployeeController extends Controller
     {
         return view('employee.healthDetails');
     }   
+    public function dependents(Employee $employee)
+    {
+        return view('employee.dependents');
+    }   
+    public function seminarsTraining(Employee $employee)
+    {
+        return view('employee.seminarsTraining');
+    }   
+
+
     public function payslip()
     {
         // Pass the employee data to the view

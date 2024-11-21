@@ -12,7 +12,6 @@
                 </div>
                 <div class="card-body">
                     <form class="row g-3">
-
                         <div class="container mt-4">
                             <h5 style="text-align: center;"><strong>EDUCATIONAL BACKGROUND</strong></h5>
 

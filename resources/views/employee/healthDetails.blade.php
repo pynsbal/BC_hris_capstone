@@ -11,7 +11,7 @@
                 </div>
                 <div class="card-body">
                     <div class="container mt-4">
-                        <h5 style="text-align: center;"><strong>HEALTH DETAILS</strong></h5>
+                        <h2 style="text-align: center;">HEALTH DETAILS</h2>
 
                         <form class="row g-4">
                             <div class="col-md-4">
@@ -65,6 +65,7 @@
                                 <a href="{{ route('familyBackground') }}" button type="button" class="btn btn-success">2</a>
                                 <a href="{{ route('educationalBackground') }}" button type="button" class="btn btn-success">3</a>
                                 <a href="{{ route('healthDetails') }}" button type="button" class="btn btn-success">4</a>
+                                <a href="{{ route('dependents') }}" button type="button" class="btn btn-success">NEXT</a>
                             </li>
                         </ul>
                     </nav>
