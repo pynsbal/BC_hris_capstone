@@ -31,4 +31,5 @@ Route::get('/documentRequest', [EmployeeController::class, 'documentRequest'])->
 
 
 //Admin Route
-Route::get('/registration', [AdminController::class, 'showRegistrationForm'])->name('registration');
+Route::get('/register', [AdminController::class, 'showRegistrationForm'])->name('registration.form');
+Route::post('/register', [AdminController::class, 'register'])->name('register');
