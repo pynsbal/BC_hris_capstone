@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LeaveController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DocumentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,6 +29,7 @@ Route::get('/researchPublication', [EmployeeController::class, 'researchPublicat
 Route::get('/payslip', [EmployeeController::class, 'payslip'])->name('payslip');
 Route::get('/leave', [EmployeeController::class, 'leave'])->name('leave');
 Route::get('/documentRequest', [EmployeeController::class, 'documentRequest'])->name('documentRequest');
+Route::resource('documents', DocumentController::class);
 Route::post('/leave/store', [LeaveController::class, 'store'])->name('leave.store');
 
 
