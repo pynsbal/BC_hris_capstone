@@ -44,11 +44,19 @@
                         <input type="number" class="form-control" id="employee_id" placeholder="Employee ID" name="employee_id" required>
                      </div>
                      <div class="col">
+                        <label for="role" class="form-label">Role</label>
+                        <select class="form-select" id="role" name="role" required>
+                           <option value="employee" selected>Employee</option>
+                           <option value="admin">Admin</option>
+                        </select>
+                     </div>
+                     <div class="col">
                         <label for="date_started" class="form-label">Date Started</label>
                         <input type="date" class="form-control" id="date_started" name="date_started" required>
                      </div>
                   </div>
                   <div class="row">
+
                      <div class="col">
                         <label for="position" class="form-label">Position</label>
                         <input type="text" class="form-control" id="position" placeholder="Position" name="position" required>
@@ -63,7 +71,7 @@
                         </select>
                      </div>
                   </div>
-                  
+
                   <div class="row justify-content-end mt-3">
                      <div class="col-auto">
 
