@@ -69,7 +69,6 @@
 
                         <button type="submit" class="btn btn-primary">Register</button>
                         <button type="button" class="btn btn-danger">Cancel</button>
-
                      </div>
                   </div>
                </form>
