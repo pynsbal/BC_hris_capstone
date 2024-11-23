@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LeaveController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -27,11 +28,12 @@ Route::get('/researchPublication', [EmployeeController::class, 'researchPublicat
 Route::get('/payslip', [EmployeeController::class, 'payslip'])->name('payslip');
 Route::get('/leave', [EmployeeController::class, 'leave'])->name('leave');
 Route::get('/documentRequest', [EmployeeController::class, 'documentRequest'])->name('documentRequest');
+Route::post('/leave/store', [LeaveController::class, 'store'])->name('leave.store');
 
 
 
 //Admin Route
 Route::get('/registration', [AdminController::class, 'showRegistrationForm'])->name('registration.form');
-Route::post('/register', [AdminController::class, 'register'])->name('register')->name('admin.register');
+Route::post('/register', [AdminController::class, 'register'])->name('admin.register');
 Route::get('/leaverequestadmin', [AdminController::class, 'leaverequestadmin'])->name('leaverequestadmin');
 Route::get('/documentrequestadmin', [AdminController::class, 'documentrequestadmin'])->name('documentrequestadmin');

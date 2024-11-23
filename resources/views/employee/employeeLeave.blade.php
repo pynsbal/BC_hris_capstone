@@ -5,7 +5,8 @@
 <div class="w3-container">
     <div class="w3-panel w3-card">
         <h3>LEAVE APPLICATION</h3>
-        <form action="/action_page.php">
+        <form action="{{ route('leave.store') }}" method="POST">
+        @csrf
             <div class="form-group">
                 <label for="dateofapplication">Date of Application</label>
                 <input type="date" id="dateofapplication" name="dateofapplication" required>
