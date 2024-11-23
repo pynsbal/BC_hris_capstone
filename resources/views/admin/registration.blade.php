@@ -8,8 +8,18 @@
                <h2><strong> EMPLOYEE REGISTRATION</strong></h2>
             </div>
             <div class="card-body">
-               <form class="row g-3" action="{{ route('register') }}" method="POST">
+               <form class="row g-3" action="{{ route('admin.register') }}" method="POST">
                   @csrf
+                  @if ($errors->any())
+                  <div class="alert alert-danger">
+                     <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                     </ul>
+                  </div>
+                  @endif
+
                   <div class="row">
                      <div class="col">
                         <label for="lastName" class="form-label">Lastname</label>
