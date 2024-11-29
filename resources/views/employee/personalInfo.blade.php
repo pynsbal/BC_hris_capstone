@@ -99,10 +99,6 @@
                             <input type="date" class="form-control" id="date_employed" name="date_employed" required>
                         </div>
                         <div class="col-md-3">
-                            <label for="date_employed" class="form-label">Date Employed</label>
-                            <input type="date" class="form-control" id="date_employed" name="date_employed" required>
-                        </div>
-                        <div class="col-md-3">
                             <label for="position" class="form-label">Position</label>
                             <input type="text" class="form-control" id="position" name="position" required>
                         </div>
