@@ -17,8 +17,10 @@ class Leave extends Model
      */
     protected $fillable = [
         'employee_id',
+        'first_name',
+        'last_name',
+        'department',
         'natureOfLeave',
-        'others',
         'reason',
         'numberOfDays',
         'fromDate',

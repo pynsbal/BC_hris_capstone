@@ -40,19 +40,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Sample row for demonstration -->
+                        @forelse ($leaves as $leave)
                         <tr>
-                            <td class="text-center">Sample ID</td>
-                            <td class="text-center">Sample Last Name</td>
-                            <td class="text-center">Sample First Name</td>
-                            <td class="text-center">Sample Position</td>
-                            <td class="text-center">Sample Department</td>
-                            <td class="text-center">Sample Leave</td>
-                            <td>
-                                <a class="btn btn-info" href="#">View</a>
+                            <td class="text-center">{{ $leave->employee_id }}</td>
+                            <td class="text-center">{{ $leave->lastName }}</td>
+                            <td class="text-center">{{ $leave->firstName }}</td>
+                            <td class="text-center">{{ $leave->fromDate }} to {{ $leave->toDate }}</td>
+                            <td class="text-center">{{ $leave->department_name }}</td>
+                            <td class="text-center">{{ $leave->reason }}</td>
+                            <td class="text-center">
+                                <a class="btn btn-info">View</a>
                             </td>
                         </tr>
+                        @empty
+                        <tr>
+                            <td colspan="7" class="text-center">No leave requests found.</td>
+                        </tr>
+                        @endforelse
                     </tbody>
+
                 </table>
             </div>
         </div>
