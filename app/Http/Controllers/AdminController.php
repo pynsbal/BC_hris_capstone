@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Department;
+use App\Models\Leave;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -15,10 +16,39 @@ class AdminController extends Controller
         $departments = Department::all();
         return view('admin.registration', ['departments' => $departments]);
     }
-    public function leaverequestadmin()
+    public function leaverequestadmin(Request $request)
     {
-        return view('admin.leaverequestadmin');
+        // Fetch search and filter parameters
+        $search = $request->input('search');
+        $filterDate = $request->input('filter_date');
+
+        // Query the leaves table and join with users and departments
+        $leaves = Leave::query()
+            ->join('users', 'leaves.employee_id', '=', 'users.id') // Join with users table
+            ->join('departments', 'users.dept_id', '=', 'departments.id') // Join with departments table
+            ->when($search, function ($query, $search) {
+                $query->where('users.employee_id', 'like', "%$search%")
+                    ->orWhere('users.firstName', 'like', "%$search%")
+                    ->orWhere('users.lastName', 'like', "%$search%");
+            })
+            ->when($filterDate, function ($query, $filterDate) {
+                $query->where('leaves.fromDate', '<=', $filterDate)
+                    ->where('leaves.toDate', '>=', $filterDate);
+            })
+            ->select(
+                'leaves.*',
+                'users.firstName',
+                'users.lastName',
+                'users.employee_id',
+                'departments.name as department_name'
+            ) // Select relevant columns
+            ->orderBy('leaves.created_at', 'desc')
+            ->get();
+
+        // Pass data to the view
+        return view('admin.leaverequestadmin', compact('leaves'));
     }
+
     public function documentrequestadmin()
     {
         return view('admin.documentrequestadmin');
